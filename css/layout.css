@@ -193,9 +193,8 @@ About Us
 
 @media (min-width:520px) {
   #about {
-    height: 100vh;
-    align-items: center;
-    padding: 0;
+    padding-top: 160px;
+    padding-bottom: 200px;
   }
 }
 /*
@@ -641,7 +640,7 @@ footer p{
 HERO
 ================================================ */
 .hero{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -700,7 +699,7 @@ HERO
   object-fit: cover;
   object-position: center bottom;
   opacity: var(--video-opacity);
-  width: 100vw;
+  width: 100%;
   height: 100vh;  
 }
 
