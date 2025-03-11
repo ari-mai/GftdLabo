@@ -2,41 +2,41 @@
 /*------------------------------*/
 /*ハンバーガーメニュー*/
 /*------------------------------*/
-.openbtn{
+.openbtn {
   position: fixed;
-  top:20px;
+  top: 20px;
   right: 8vw;
   z-index: 9999;
   cursor: pointer;
   width: 40px;
   height: 40px;
 }
-@media (min-width:520px){
-  .openbtn{
+@media (min-width: 520px) {
+  .openbtn {
     right: 20px;
   }
 }
-.openbtn .openbtn-area{
-  transition: all .6s;
+.openbtn .openbtn-area {
+  transition: all 0.6s;
   width: 40px;
   height: 40px;
 }
-.openbtn span{
+.openbtn span {
   display: inline-block;
-  transition: all .4s;
+  transition: all 0.4s;
   position: absolute;
   left: 6px;
   height: 3px;
   background: var(--white);
   width: 70%;
 }
-.openbtn span:nth-of-type(1){
-  top:14px;
+.openbtn span:nth-of-type(1) {
+  top: 14px;
 }
 .openbtn span:nth-of-type(2) {
   top: 24px;
 }
-.openbtn.active span:nth-of-type(1){
+.openbtn.active span:nth-of-type(1) {
   top: 14px;
   left: 10px;
   transform: translateY(6px) rotate(-45deg);
@@ -49,7 +49,7 @@
 /*------------------------------*/
 /*メニュー画面*/
 /*------------------------------*/
-#g-nav{
+#g-nav {
   position: fixed;
   z-index: -1;
   opacity: 0;
@@ -59,11 +59,11 @@
   background: var(--d-gray);
   transition: all 0.3s;
 }
-#g-nav.panelactive{
+#g-nav.panelactive {
   opacity: 1;
   z-index: 999;
 }
-#g-nav.panelactive #g-nav-list{
+#g-nav.panelactive #g-nav-list {
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -71,7 +71,7 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-#g-nav ul{
+#g-nav ul {
   display: none;
   position: absolute;
   z-index: 999;
@@ -79,23 +79,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#g-nav.panelactive ul{
+#g-nav.panelactive ul {
   display: block;
 }
-#g-nav li{
+#g-nav li {
   list-style: none;
   text-align: center;
 }
-#g-nav li a{
+#g-nav li a {
   display: inline-block;
   text-decoration: none;
   color: var(--white);
   padding: 10px;
   font-family: var(--lato);
   font-size: 2rem;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
-#g-nav li a span{
+#g-nav li a span {
   display: block;
   font-size: 1.2rem;
   font-family: var(--noto);
@@ -103,7 +103,7 @@
 /*------------------------------*/
 /*ページトップボタン*/
 /*------------------------------*/
-#page-top a{
+#page-top a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,10 +118,10 @@
   transition: all 0.3s;
   font-family: var(--lato);
 }
-#page-top a:hover{
+#page-top a:hover {
   background: var(--yellow);
 }
-#page-top{
+#page-top {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -129,15 +129,15 @@
   opacity: 0;
   transform: translateX(100px);
 }
-#page-top.LeftMove{
+#page-top.LeftMove {
   animation: LeftAnime 0.5s forwards;
 }
 @keyframes LeftAnime {
-  from{
+  from {
     opacity: 0;
     transform: translateX(100px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0);
   }
@@ -155,5 +155,66 @@
   to {
     opacity: 1;
     transform: translateX(100px);
+  }
+}
+/*------------------------------*/
+/*クライアントの事例がふわっと出現*/
+/*------------------------------*/
+.box {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+/*右から*/
+.fadeRight {
+  animation-name: fadeRightAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*左から*/
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*下から*/
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
