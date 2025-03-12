@@ -8,6 +8,7 @@ GENERAL STYLING
   --blue: #08b9b4;
   --yellow: #e3de54;
   --gray: #e8e8e8;
+  --l-gray: #f5f5f7;
   --d-gray: #36393c;
   --red: #b90808;
   /*fotns*/
@@ -113,7 +114,7 @@ ul li {
 }
 /*グレーの背景部分(AboutUs以外)*/
 .gray-wrapper {
-  background: var(--gray);
+  background: var(--l-gray);
   padding-top: 60px;
   padding-bottom: 80px;
 }
